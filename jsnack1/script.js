@@ -22,19 +22,23 @@ let numero;
 let somma = 0;
 
 let chosen = document.getElementById('chosen');
+let sommaFinale = document.getElementById('somma');
 
 for (let i = 0; i < 10; i++) {
     numero = parseInt(prompt('Inserire un numero da 1-10'));
-    chosen.innerHTML += '<li> numero: '+ numero +'</li>';
+    chosen.innerHTML += '<li> numero '+ (i + 1) + ' : ' + numero +'</li>';
     console.log('you chose' + numero);
 
     somma += numero
-    console.log('la somma è' + somma)
+    sommaFinale.innerHTML = '<h1> la somma di tutti i numeri è:' + somma +'</h1>';
+    console.log('la somma è' + somma);
+    }
+
     
 
-    }
+//};
     
-//}
+
 
 // document.getElementByID - to insert the result into the HTML
 // list with tag <UL>  <----- do this INSIDE FOR
